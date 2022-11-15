@@ -96,3 +96,6 @@ export HADOOP_SECONDARYNAMENODE_OPTS="-Dcom.sun.management.jmxremote $HADOOP_SEC
 export HDFS_DATANODE_OPTS="-Dcom.sun.management.jmxremote $HDFS_DATANODE_OPTS"
 export HADOOP_BALANCER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_BALANCER_OPTS"
 export HADOOP_JOBTRACKER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_JOBTRACKER_OPTS"
+
+export HDFS_DATANODE_OPTS="$HDFS_DATANODE_OPTS -javaagent:/usr/lib/jmx_exporter/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=27002:/usr/lib/jmx_exporter/datanode.yml"
+export HDFS_NAMENODE_OPTS="$HDFS_NAMENODE_OPTS -javaagent:/usr/lib/jmx_exporter/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=27001:/usr/lib/jmx_exporter/namenode.yml"

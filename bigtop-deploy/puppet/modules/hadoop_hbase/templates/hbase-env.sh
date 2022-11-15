@@ -41,7 +41,7 @@ export HBASE_HEAPSIZE=<%= @heap_size %>
 # Below are what we set by default.  May only work with SUN JVM.
 # For more on why as well as other possible settings,
 # see http://wiki.apache.org/hadoop/PerformanceTuning
-export HBASE_OPTS="$HBASE_OPTS -ea -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode"
+export HBASE_OPTS="$HBASE_OPTS -ea -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode" -javaagent:/usr/lib/jmx_exporter/jmx_prometheus_javaagent-0.16.2-SNAPSHOT.jar=8090:/usr/lib/jmx_exporter/hbase.yml"
 
 <% if @kerberos_realm != "" -%>
 # Secure Zookeeper settings

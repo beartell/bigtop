@@ -1,0 +1,34 @@
+diff --git a/hadoop-project/pom.xml b/hadoop-project/pom.xml
+index 23d1c87..d38feb4 100644
+--- a/hadoop-project/pom.xml
++++ b/hadoop-project/pom.xml
+@@ -1234,6 +1234,14 @@
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-reload4j</artifactId>
+           </exclusion>
++          <exclusion>
++            <groupId>io.netty</groupId>
++            <artifactId>netty-handler</artifactId>
++          </exclusion>
++          <exclusion>
++            <groupId>io.netty</groupId>
++            <artifactId>netty-transport-native-epoll</artifactId>
++          </exclusion>
+         </exclusions>
+       </dependency>
+       <dependency>
+@@ -1258,6 +1266,14 @@
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-log4j12</artifactId>
+           </exclusion>
++          <exclusion>
++            <groupId>io.netty</groupId>
++            <artifactId>netty-handler</artifactId>
++          </exclusion>
++          <exclusion>
++            <groupId>io.netty</groupId>
++            <artifactId>netty-transport-native-epoll</artifactId>
++          </exclusion>
+         </exclusions>
+       </dependency>
+       <dependency>
